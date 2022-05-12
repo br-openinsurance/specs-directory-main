@@ -1,0 +1,199 @@
+{
+	"info": {
+		"_postman_id": "0125442c-4fda-4d85-bebc-c8b0fc4dd225",
+		"name": "Opin Prod - Collection Example",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Organisations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/organisations",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"organisations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Api Resource",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/organisations/90be54ba-a5d7-4bf6-949e-0c44dc45f66f/authorisationservers/7b59b7e9-21f8-4a25-b0fe-d8edb5fec85e/apiresources/1d4e092e-6da4-41b8-a88a-ae4fd910356f",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"organisations",
+						"90be54ba-a5d7-4bf6-949e-0c44dc45f66f",
+						"authorisationservers",
+						"7b59b7e9-21f8-4a25-b0fe-d8edb5fec85e",
+						"apiresources",
+						"1d4e092e-6da4-41b8-a88a-ae4fd910356f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/users/test.email@raidiam.com",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"users",
+						"test.email@raidiam.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET SS Assertion",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/jwt",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/organisations/fe638203-153c-4915-b80a-2ca470a3b25c/softwarestatements/15a92de7-aab4-4f8b-9c22-fd79242b32c9/assertion",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"organisations",
+						"fe638203-153c-4915-b80a-2ca470a3b25c",
+						"softwarestatements",
+						"15a92de7-aab4-4f8b-9c22-fd79242b32c9",
+						"assertion"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "tokenName",
+				"value": "",
+				"type": "string"
+			},
+			{
+				"key": "scope",
+				"value": "directory:software",
+				"type": "string"
+			},
+			{
+				"key": "clientSecret",
+				"value": "",
+				"type": "string"
+			},
+			{
+				"key": "clientId",
+				"value": "",
+				"type": "string"
+			},
+			{
+				"key": "useBrowser",
+				"value": false,
+				"type": "boolean"
+			},
+			{
+				"key": "accessTokenUrl",
+				"value": "http://auth.directory.opinbrasil.com.br/token",
+				"type": "string"
+			},
+			{
+				"key": "authUrl",
+				"value": "https://auth.directory.opinbrasil.com.br/auth",
+				"type": "string"
+			},
+			{
+				"key": "redirect_uri",
+				"value": "https://ui.directory.opinbrasil.com.br/oauth2/idpresponse",
+				"type": "string"
+			},
+			{
+				"key": "grant_type",
+				"value": "authorization_code",
+				"type": "string"
+			},
+			{
+				"key": "challengeAlgorithm",
+				"value": "S256",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			},
+			{
+				"key": "client_authentication",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "https://matls-api.directory.opinbrasil.com.br"
+		},
+		{
+			"key": "Client_ID",
+			"value": "NyimwW14X4pYX4iiccr6s"
+		}
+	]
+}
